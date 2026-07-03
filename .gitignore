@@ -1,0 +1,42 @@
+# ----------------------------------------------------------------------
+# User-Requested Ignores
+# ----------------------------------------------------------------------
+# Ignore the old root scripts (as you'll be moving logic to src/)
+index*.php
+
+# ----------------------------------------------------------------------
+# Composer / Dependencies
+# ----------------------------------------------------------------------
+# Never commit the vendor folder. Other developers will run `composer install`
+vendor/
+
+# ----------------------------------------------------------------------
+# Machine Learning Artifacts
+# ----------------------------------------------------------------------
+# Ignore generated models. These should be built locally or via CI/CD.
+models/*
+# (Optional) Un-comment the line below if you want to keep the models folder itself in git
+# !models/.gitkeep
+
+# Ignore processed data outputs.
+data/processed/*
+# !data/processed/.gitkeep
+
+# Note: We are NOT ignoring `data/raw/` assuming you want to push
+# the small sample CSVs (iris, wine, insurance) to GitHub so others can run it.
+# If they were huge datasets, you would ignore them too.
+
+# ----------------------------------------------------------------------
+# OS & IDE Specific Files
+# ----------------------------------------------------------------------
+# macOS specific hidden files (Since you are on a MacBook)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Common IDE folders (PyCharm, VSCode, IntelliJ)
+.idea/
+.vscode/
+*.swp
+*.swo
