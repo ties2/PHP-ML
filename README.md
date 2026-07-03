@@ -8,18 +8,18 @@ Implement Machine Learning lifecycle and MLOps architectural patterns natively i
 
 While Python dominates the ML space, many enterprise backends run on PHP. This project illustrates how to decouple data processing, model training, and API serving using a standardized MLOps structure within a PHP ecosystem.
 
-## 🧠 Models Implemented
+##  Models Implemented
 * **K-Nearest Neighbors (KNN):** Used for categorical classification (e.g., Iris Dataset).
 * **Support Vector Regressor (SVR):** Used for continuous variable prediction (e.g., Wine Quality).
 
-## 🏗 Architecture & MLOps Principles
+##  Architecture & MLOps Principles
 This repository strictly follows MLOps best practices by decoupling the pipeline:
 
 1. **Training Pipeline (`src/Training/`)**: Ingests `CSV` datasets, utilizes Stratified Random Splitting to ensure representative test/train sets, trains the model, and serializes the state to disk.
 2. **Serving Layer (`src/Serving/`)**: A lightweight API endpoint that deserializes the pre-trained model into memory to provide low-latency predictions via HTTP POST.
 3. **Containerization (`deployment/`)**: Dockerized environment ensuring seamless execution without local PHP configuration.
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option 1: Run via Docker (Recommended)
 ```bash
